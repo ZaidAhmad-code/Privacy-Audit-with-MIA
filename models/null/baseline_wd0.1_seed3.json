@@ -1,0 +1,21 @@
+{
+  "kind": "plain",
+  "epochs": 50,
+  "n_train": 5969,
+  "input_dim": 118,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "batch_size": 128,
+  "weight_decay": 0.1,
+  "model": "baseline_wd0.1",
+  "seed": 3,
+  "library_versions": {
+    "python": "3.13.18",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "torch": "2.11.0+cpu",
+    "opacus": "1.6.0",
+    "art": null,
+    "sklearn": "1.6.1"
+  }
+}

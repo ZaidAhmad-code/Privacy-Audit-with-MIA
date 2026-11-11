@@ -1,0 +1,9 @@
+model,brier_before,brier_after,ece_before,ece_after,mean_prob_after
+baseline_e50,0.148,0.098,0.148,0.011,0.118
+baseline_early,0.097,0.097,0.011,0.012,0.113
+dpsgd_eps0.5,0.107,0.098,0.097,0.014,0.117
+dpsgd_eps1,0.107,0.098,0.097,0.013,0.115
+dpsgd_eps2,0.107,0.098,0.097,0.01,0.115
+dpsgd_eps5,0.107,0.098,0.098,0.008,0.114
+dpsgd_eps10,0.107,0.097,0.098,0.009,0.114
+dpsgd_eps100,0.107,0.097,0.098,0.01,0.113

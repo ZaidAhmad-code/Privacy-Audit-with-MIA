@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PrivacyAudit</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="rail">
+    <div class="brand"><span class="mark"></span><b>PrivacyAudit</b></div>
+    <nav id="models" class="mlist"></nav>
+    <p class="cap" style="margin-top:16px">Run</p>
+    <div id="seeds" class="seg"></div>
+    <button id="demoBtn" type="button" class="ghost" style="margin-top:auto">Start demo</button>
+    <button id="theme" type="button" class="ghost" style="margin-top:8px">Light mode</button>
+  </aside>
+  <main>
+    <header class="pg">
+      <div class="pg-bar">
+        <div>
+          <h1>Privacy audit</h1>
+          <p class="sub-head">Auditing membership leakage and differential privacy on hospital readmission models</p>
+        </div>
+        <div id="views" class="seg views">
+          <button type="button" data-v="mia" class="on">MIA (Black-box)</button>
+          <button type="button" data-v="lira">LiRA (Gold Standard)</button>
+        </div>
+      </div>
+
+      <!-- Top-Level Tabs -->
+      <nav class="main-tabs" id="mainTabs">
+        <button type="button" class="tab-btn on" data-tab="tab-audit">
+          <span class="icon">📊</span> Model Audit & Trade-off
+        </button>
+        <button type="button" class="tab-btn" data-tab="tab-forensics">
+          <span class="icon">🔍</span> Patient Forensics & Exposure
+        </button>
+        <button type="button" class="tab-btn" data-tab="tab-ablations">
+          <span class="icon">🧪</span> DP & Calibration Ablations
+        </button>
+        <button type="button" class="tab-btn" data-tab="tab-clinical">
+          <span class="icon">🏥</span> Clinical Utility & Thresholds
+        </button>
+      </nav>
+      <p id="vsub"></p>
+    </header>
+
+    <!-- TAB 1: MODEL AUDIT -->
+    <div id="tab-audit" class="tab-pane active">
+      <section id="kpis" class="kpis"></section>
+      <section id="result" aria-live="polite"></section>
+      <section id="curves"></section>
+      <section class="panel" id="cp">
+        <div class="ph">
+          <div>
+            <h2>Privacy vs usefulness</h2>
+            <p class="sub">Hover for numbers. Click a point to audit it.</p>
+          </div>
+          <ul class="lg">
+            <li><i style="background:var(--bad)"></i>Privacy risk</li>
+            <li><i style="background:var(--acc)"></i>Usefulness</li>
+          </ul>
+        </div>
+        <div id="chart" class="chartbox"></div>
+      </section>
+    </div>
+
+    <!-- TAB 2: PATIENT FORENSICS & EXPOSURE -->
+    <div id="tab-forensics" class="tab-pane">
+      <div class="pane-hdr">
+        <h2>Patient Forensics & Privacy Leakage Studies</h2>
+        <p class="sub">Investigating multi-visit patient leakage, canary exposure scores, attribute inference, and simple attack metrics.</p>
+      </div>
+      <section id="cards-forensics" class="cards"></section>
+    </div>
+
+    <!-- TAB 3: DP & CALIBRATION ABLATIONS -->
+    <div id="tab-ablations" class="tab-pane">
+      <div class="pane-hdr">
+        <h2>Differential Privacy & Calibration Deep Dives</h2>
+        <p class="sub">Empirical validation against the attack's chance baseline, post-processing probability recalibration, and clipping sweeps.</p>
+      </div>
+      <section id="cards-ablations" class="cards"></section>
+    </div>
+
+    <!-- TAB 4: CLINICAL UTILITY & THRESHOLDS -->
+    <div id="tab-clinical" class="tab-pane">
+      <div class="pane-hdr">
+        <h2>Clinical Utility & Operational Decision Thresholds</h2>
+        <p class="sub">Evaluating readmission prediction when hospital staff flag the top 20% highest-risk patients (random base rate: 11.1%).</p>
+      </div>
+      <section id="cards-clinical" class="cards"></section>
+    </div>
+
+  </main>
+</div>
+<div id="demo" hidden><span id="dt"></span><button id="db" type="button">Back</button><button id="dn" type="button">Next</button><button id="dx" type="button">Exit</button></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

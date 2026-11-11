@@ -1,0 +1,6 @@
+split,rows,patients,readmitted_rows,readmitted_share
+target_train,5969,4125,669,0.1121
+target_val,1601,1125,190,0.1187
+target_test,3147,2250,348,0.1106
+shadow_train,7454,5250,865,0.116
+shadow_test,3134,2250,363,0.1158

@@ -1,0 +1,6 @@
+step,rows,patients
+Raw data,101766,71518
+Removed patients who died or went to hospice,99343,69990
+Removed rows with missing race or diagnosis,95673,67129
+Removed unknown gender,95672,67128
+Random sample of 15000 patients,21305,15000

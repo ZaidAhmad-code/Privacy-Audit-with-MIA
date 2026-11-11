@@ -1,0 +1,30 @@
+{
+  "kind": "dp-sgd",
+  "target_epsilon": 1,
+  "spent_epsilon": 0.9988217876571365,
+  "delta": 1e-05,
+  "noise_multiplier": 3.984375,
+  "max_grad_norm": 1.0,
+  "sample_rate": 0.02127659574468085,
+  "steps": 2350,
+  "epochs": 50,
+  "n_train": 5969,
+  "input_dim": 118,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "batch_size": 128,
+  "accountant": "rdp",
+  "sampling": "poisson",
+  "privacy_unit": "single hospital visit (record level)",
+  "model": "dpsgd_eps1",
+  "seed": 1,
+  "library_versions": {
+    "python": "3.13.18",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "torch": "2.11.0+cpu",
+    "opacus": "1.6.0",
+    "art": null,
+    "sklearn": "1.6.1"
+  }
+}

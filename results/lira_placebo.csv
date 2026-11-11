@@ -1,0 +1,12 @@
+model,placebo_auc,placebo_tpr@1%,real_auc,real_tpr@1%
+baseline_e50,0.501,0.011,0.639,0.074
+baseline_early,0.498,0.01,0.534,0.025
+dpsgd_eps0.5,0.5,0.011,0.501,0.015
+dpsgd_eps1,0.499,0.01,0.502,0.015
+dpsgd_eps2,0.498,0.01,0.506,0.016
+dpsgd_eps5,0.499,0.01,0.509,0.016
+dpsgd_eps10,0.499,0.01,0.511,0.017
+dpsgd_eps100,0.501,0.01,0.52,0.019
+baseline_wd0.001,0.5,0.011,,
+baseline_wd0.01,0.498,0.009,,
+baseline_wd0.1,0.5,0.01,,
